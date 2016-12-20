@@ -6,6 +6,8 @@ const Sum = x =>
     inspect: () => `Sum(${x})`
 })
 
+Sum.empty = () => Sum(0)
+
 const All = x =>
 ({
     x,
@@ -14,6 +16,11 @@ const All = x =>
     inspect: () => `All(${x})`
 })
 
+All.empty = () => All(true)
+
+/**
+ * First is NOT a monoid
+ */
 const First = x =>
 ({
     x,
