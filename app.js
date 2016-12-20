@@ -26,6 +26,7 @@ let exmp = {
     previewPath: "./preview.txt"
 }
 
+debugger;
 let result = wrapExample(exmp);
 
 console.log(result);    
