@@ -1,0 +1,16 @@
+{
+  "name": "learning_comp_fp",
+  "version": "1.0.0",
+  "description": "learning composable fp",
+  "main": "index.js",
+  "repository": {
+    "url": "git@github.com:swarajd/learn-composable-fp.git",
+    "type": "git"
+  },
+  "author": "Swaraj Dhumne <swaraj.dhumne@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "immutable": "^3.8.1",
+    "immutable-ext": "^1.0.8"
+  }
+}
