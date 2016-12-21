@@ -20,4 +20,7 @@ const Left = x =>
     concat: o => Left(x)
 })
 
-module.exports = {Right, Left}
+const fromNullable = x =>
+    x != null ? Right(x) : Left(null)
+
+module.exports = {Right, Left, fromNullable}

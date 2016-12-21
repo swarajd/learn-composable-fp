@@ -1,6 +1,5 @@
-const {Right, Left} = require("./Either")
+const {Right, Left, fromNullable} = require("./Either")
 const {Sum} = require("./Semigroups")
-const {fromNullable} = require("./utils")
 const {List} = require("immutable-ext")
 
 const stats = List.of({page: "Home", views: 40},
