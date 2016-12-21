@@ -5,4 +5,6 @@ const Box = x =>
     fold: f => f(x)
 })
 
+Box.of = x => Box(x)
+
 module.exports = Box;
