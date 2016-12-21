@@ -2,6 +2,7 @@
 
 const Right = x => 
 ({
+    ap: r => r.map(x),
     map: f => Right(f(x)),
     chain: f => f(x),
     fold: (f, g) => g(x),
@@ -13,6 +14,7 @@ const Right = x =>
 
 const Left = x => 
 ({
+    ap: r => Left(x),
     map: f => Left(x),
     chain: f => Left(x),
     fold: (f, g) => f(x),
