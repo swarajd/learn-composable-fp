@@ -1,4 +1,4 @@
-const {Right, Left} = require('./Either');
+const {fromNullable} = require("./utils")
 
 // const result = Right(2)
 //     .map(x => x + 1)
@@ -6,8 +6,6 @@ const {Right, Left} = require('./Either');
 //     .fold(x => 'error',
 //           x => x)
 
-const fromNullable = x =>
-    x != null ? Right(x) : Left(null)
 
 const findColor = name => 
     fromNullable(({red: "#ff4444", blue: "#3b5998", yellow: "#fff68f"})[name]);
