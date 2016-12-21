@@ -6,4 +6,6 @@ const test = new Task((rej, res) =>
 
 let res = Task.of(p => `title: ${p.title}`)
 // .ap(test)
-res.fork(e => e, console.log)
+debugger;
+res
+.fork(e => e, console.log)

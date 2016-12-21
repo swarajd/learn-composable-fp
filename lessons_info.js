@@ -2,6 +2,12 @@ const request = require("request")
 const cheerio = require("cheerio")
 const Task = require("data.task")
 
+/**
+ * THIS DOESN'T WORK
+ * the lessons online are mixed up 
+ * compared to the actual order for some reason
+ */
+
 const loadUrl = url => 
     new Task((rej, res) =>
         request(url, (err, resp, html) => 
@@ -9,7 +15,7 @@ const loadUrl = url =>
 
 const getAllElem = (sel) => {
     let elems = [];
-    sel.each((i, elem) => elems.unshift(elem))
+    sel.each((i, elem) => elems.push(elem))
     return elems
 }
 
@@ -21,7 +27,7 @@ const inspect = (contents) => {
     return contents
 }
 
-const url = "https://egghead.io/instructors/brian-lonsdorf";
+const url = "https://egghead.io/instructors/brian-lonsdorf?order=ASC";
 
 const scrape = loadUrl(url)
             .map(html => cheerio.load(html))
@@ -31,4 +37,4 @@ const scrape = loadUrl(url)
 
 const res = scrape.fork(e => e, 
                         d => d.map((title, i) => 
-                                console.log(i + ". " + title)))
+                                console.log((i + 1) + ". " + title)))
