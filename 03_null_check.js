@@ -1,4 +1,4 @@
-const {fromNullable} = require("./utils")
+const {fromNullable} = require("./Either")
 
 // const result = Right(2)
 //     .map(x => x + 1)

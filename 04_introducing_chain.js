@@ -1,13 +1,10 @@
-const {Right, Left} = require('./Either')
+const {Right, Left, fromNullable} = require('./Either')
 
 // const result = Right(2)
 //     .map(x => x + 1)
 //     .map(x => x / 2)
 //     .fold(x => 'error',
 //           x => x)
-
-const fromNullable = x =>
-    x != null ? Right(x) : Left(null)
 
 const fs = require('fs')
 

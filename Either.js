@@ -23,4 +23,9 @@ const Left = x =>
 const fromNullable = x =>
     x != null ? Right(x) : Left(null)
 
-module.exports = {Right, Left, fromNullable}
+module.exports = {
+    Right, 
+    Left, 
+    fromNullable,
+    of: Right
+}
