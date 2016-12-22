@@ -18,6 +18,16 @@ const All = x =>
 
 All.empty = () => All(true)
 
+const Pair = (x, y) =>
+({
+    x,
+    y,
+    concat: ({x: x1, y: y1}) =>
+        Pair(x.concat(x1), y.concat(y1)),
+    toList: () => [x, y],
+    bimap: (f, g) => Pair(f(x), g(y))
+})
+
 /**
  * First is NOT a monoid
  */
@@ -28,4 +38,4 @@ const First = x =>
     inspect: () => `First(${x})`
 })
 
-module.exports = {Sum, All, First};
+module.exports = {Sum, All, Pair, First};
