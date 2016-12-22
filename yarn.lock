@@ -122,11 +122,19 @@ css-what@2.1:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/css-what/-/css-what-2.1.0.tgz#9467d032c38cfaefb9f2d79501253062f87fa1bd"
 
+daggy@0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/daggy/-/daggy-0.0.1.tgz#ae9c932c9f7136e655a04afb21e8baadfd0d3707"
+
 dashdash@^1.12.0:
   version "1.14.1"
   resolved "https://registry.yarnpkg.com/dashdash/-/dashdash-1.14.1.tgz#853cfa0f7cbe2fed5de20326b8dd581035f6e2f0"
   dependencies:
     assert-plus "^1.0.0"
+
+data.either:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/data.either/-/data.either-1.4.0.tgz#fb4dfb180028b0095f19df74a5dd1619d6f1fd19"
 
 data.task:
   version "3.1.1"
@@ -185,6 +193,12 @@ extend@~3.0.0:
 extsprintf@1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/extsprintf/-/extsprintf-1.0.2.tgz#e1080e0658e300b06294990cc70e1502235fd550"
+
+fantasy-identities:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/fantasy-identities/-/fantasy-identities-0.0.1.tgz#52baec7189ceebb558b29b5db8d50d26f4d85182"
+  dependencies:
+    daggy "0.0.1"
 
 forever-agent@~0.6.1:
   version "0.6.1"
